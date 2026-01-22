@@ -1,0 +1,231 @@
+body { 
+    background-color: #1a1a1a; 
+    font-family: sans-serif; 
+}
+
+.sidebar {
+    width: 260px; 
+    height: 100vh; 
+    position: fixed;
+    background: linear-gradient(180deg, #000000 0%, #450000 100%);
+    color: white;
+    overflow-y: auto;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.sidebar.collapsed {
+    transform: translateX(-100%);
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        transform: none;
+    }
+
+    .sidebar.collapsed {
+        display: none;
+    }
+
+    .nav-pills {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .nav-item {
+        flex: 1 1 auto;
+        min-width: 150px;
+    }
+}
+
+.sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.6); 
+    border-radius: 10px; 
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+    padding: 10px 15px;
+}
+
+.sidebar .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #1791e8;
+    transform: translateX(5px);
+}
+
+.sidebar .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.1); 
+    color: #1791e8 !important;
+}
+
+.sidebar .nav-link.active:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.brand-section {
+    padding-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-logo {
+    width: auto;
+    height: auto;
+    max-width: 250px;
+    object-fit: contain;
+    filter: brightness(1.8);
+}
+
+.navbar {
+    background: linear-gradient(90deg, #000000 0%, #450000 100%);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        height: auto;
+        padding: 15px 1rem !important;
+    }
+
+    .navbar .container-fluid {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar h5 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px !important;
+    }
+
+    .ms-auto {
+        width: 100%;
+        justify-content: center !important;
+    }
+}
+
+.content-wrapper {
+    margin-left: 260px;
+    transition: margin-left 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        margin-left: 0;
+    }
+}
+
+.nav-pills {
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .nav-pills {
+        margin-top: 10px;
+        padding: 10px !important;
+    }
+}
+
+.nav-title {
+    color: white;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.bi-bell-fill {
+    position: relative;
+    width: 24px;
+    height: auto;
+    color: white;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-right: auto;
+}
+
+@media (max-width: 576px) {
+    .bi-bell-fill {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+.btn-outline-danger {
+    color: #ffffff;
+    border-color: #680101;
+    border-radius: 5px;
+    font-weight: 500;
+    padding: 5px 15px;
+    margin-left: 20px;
+    margin-right: auto;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn-outline-danger:hover {
+    background-color: #e00000;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(207, 3, 3, 0.3);
+}
+
+@media (max-width: 576px) {
+    .btn-outline-danger {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 5px 10px;
+        font-size: 0.85rem;
+    }
+}
+
+.member-name {
+    color: rgba(255, 255, 255, 0.921);
+    font-style: italic;
+    font-weight: 600;
+    font-size: small;
+}
+
+.trainer-name {
+    color: rgba(255, 255, 255, 0.921);
+    font-weight: 600;
+    font-style: italic;
+    font-size: small;
+}
+
+@media (max-width: 576px) {
+    .trainer-name,
+    .member-name {
+        font-size: 0.75rem;
+    }
+
+    .text-white-50 {
+        display: none;
+    }
+
+    img.rounded-circle {
+        width: 35px !important;
+    }
+}
+
+.toggle-sidebar-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .toggle-sidebar-btn {
+        display: block;
+    }
+}
