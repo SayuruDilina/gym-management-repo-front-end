@@ -156,6 +156,10 @@ body {
         margin-left: 10px;
         margin-right: 10px;
     }
+    
+    .d-flex.gap-3 {
+        gap: 0.5rem !important;
+    }
 }
 
 .btn-outline-danger {
@@ -194,6 +198,12 @@ body {
 }
 
 .trainer-name {
+    color: rgba(255, 255, 255, 0.921);
+    font-weight: 600;
+    font-style: italic;
+    font-size: small;
+}
+.admin-name {
     color: rgba(255, 255, 255, 0.921);
     font-weight: 600;
     font-style: italic;

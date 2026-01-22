@@ -47,6 +47,7 @@
                         <p class="mb-0 text-white-50 small">Professional Trainer</p>
                     </div>
                     <img src="profile.png" class="rounded-circle border border-2 border-info" width="40">
+                    <div class="vr text-white-50 mx-2"></div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-bell-fill" viewBox="0 0 16 16" title="Notifications">
                         <path
